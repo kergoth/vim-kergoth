@@ -2,16 +2,16 @@
 set guioptions=Acgae
 
 " Default window size
-if has('vim_starting')
-  set lines=50
-  set columns=112
-endif
-
 " Behavior of full screen mode
 try
   set fuoptions=maxvert,maxhorz
 catch
 endtry
+
+" Default window size
+if has('gui_running')
+  set lines=50 columns=112
+endif
 
 " In order of preference, best to worst
 let g:fonts = ['Consolas', 'Inconsolata', 'Menlo', 'DejaVu Sans Mono',
