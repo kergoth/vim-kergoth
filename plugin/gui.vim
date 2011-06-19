@@ -42,4 +42,7 @@ fun! SetFonts()
   endif
 endfun
 
-au VimEnter * if empty(&guifont) | call SetFonts() | endif
+augroup GuiSettings
+  au!
+  au GUIEnter * if empty(&guifont) | call SetFonts() | endif
+augroup END
