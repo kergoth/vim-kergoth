@@ -32,5 +32,3 @@ function! Goformat()
 endfunction
 
 command! Gofmt call Goformat()
-
-au BufWrite *.go :Gofmt
