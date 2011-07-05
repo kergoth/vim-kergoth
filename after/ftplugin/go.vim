@@ -13,6 +13,8 @@ set fileencoding=utf-8
 let g:go_highlight_space_tab_error = 0
 let g:go_highlight_trailing_whitespace_error = 0
 
+" 'make test' error format for Go:
+set errorformat=gotest:\ parse\ error:\ %f:%l:%c:\ %m,&errorformat
 
 if !executable("gofmt")
   finish
