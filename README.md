@@ -4,7 +4,7 @@
 
 NOTE: This will move your existing .vimrc to .vimrc.bak and create a new .vimrc
 
-    curl -s https://github.com/kergoth/vim-kergoth/raw/master/scripts/setup.sh | sh
+    curl -s https://raw.github.com/kergoth/vim-kergoth/master/scripts/setup.sh | sh
 
 Once in vim run
 
