@@ -67,6 +67,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-gocode'
 Bundle 'vis'
 
 filetype plugin indent on
