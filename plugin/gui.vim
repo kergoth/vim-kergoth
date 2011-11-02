@@ -8,11 +8,6 @@ try
 catch
 endtry
 
-" Default window size
-if has('gui_running')
-  set lines=50 columns=112
-endif
-
 " In order of preference, best to worst
 let g:fonts = ['Consolas', 'Inconsolata', 'Menlo', 'DejaVu Sans Mono',
             \  'Monaco', 'Andale Mono', 'Courier']
@@ -45,4 +40,6 @@ endfun
 augroup GuiSettings
   au!
   au GUIEnter * if empty(&guifont) | call SetFonts() | endif
+  " Default window size
+  au VimEnter * set lines=50 columns=112
 augroup END
