@@ -1,6 +1,9 @@
 " Change the current directory to the location of the
 " file being edited.
-com! -nargs=0 -complete=command   Bcd lcd %:p:h
+command! -nargs=0 -complete=command   Bcd lcd %:p:h
+
+" Make :Man available
+runtime ftplugin/man.vim
 
 " Quieter grep
 command! -nargs=+ Grep execute 'silent grep! <args>' | redraw!
@@ -9,5 +12,5 @@ command! -nargs=+ Grep execute 'silent grep! <args>' | redraw!
 command! -nargs=0 LocalTags let g:easytags_file = './.tags' | HighlightTags
 
 " Write a file with sudo
-com! -bar -nargs=0 SudoWrite
+command! -bar -nargs=0 SudoWrite
       \ | :silent exe "write !sudo tee % >/dev/null" | silent edit!
