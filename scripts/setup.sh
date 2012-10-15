@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh -ex
 
 scriptsdir=$(cd $(dirname $0) && pwd)
 
