@@ -1,5 +1,3 @@
-syntax on
-
 " Line numbering
 if v:version >= 700
   set number
@@ -49,6 +47,12 @@ set ruler
 
 " Display as much of the last line in a window as possible
 set display+=lastline
+
+" Abbreviate some messages, hide others
+set shortmess+=atItToO
+
+" Simple display, no unnecessary frills
+set fillchars=
 
 " Show whitespace as unicode chars
 if (&termencoding == 'utf-8') || has('gui_running')
