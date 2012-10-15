@@ -22,4 +22,3 @@ Then restart vim and you'll be good to go.
 
 - Bring over the detailed information from the README from my old vim setup
 - Add the snipmate bundle
-- Add a mechanism for machine local vim configuration (e.g. font sizes)
