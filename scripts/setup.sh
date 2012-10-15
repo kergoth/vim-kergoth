@@ -13,7 +13,6 @@ if ! [ -d ~/.vim/bundle/vim-kergoth ]; then
 fi
 
 test -f ~/.vimrc && mv ~/.vimrc ~/.vimrc.bak
+ln -sf $(dirname $scriptsdir)/vimrc ~/.vimrc
 
-ln -s $(dirname $scriptsdir)/vimrc ~/.vimrc
-
-vim +BundleInstall +qall
+vim +BundleInstall +qall </dev/tty
