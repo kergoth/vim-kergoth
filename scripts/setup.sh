@@ -15,3 +15,5 @@ fi
 test -f ~/.vimrc && mv ~/.vimrc ~/.vimrc.bak
 
 ln -s $(dirname $scriptsdir)/vimrc ~/.vimrc
+
+vim +BundleInstall +qall
