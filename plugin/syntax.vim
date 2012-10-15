@@ -2,7 +2,7 @@ if has('syntax')
   syntax enable
 endif
 
-augroup KergothSyntax
+augroup KergothHighlight
   au!
   " Conceal fold markers if the feature is available
   if has('conceal')
@@ -15,12 +15,13 @@ augroup KergothSyntax
 
   " Highlight vim modelines
   au BufRead,BufNewFile * syn match vimModeline contains=@NoSpell contained /vim:\s*set[^:]\{-1,\}:/
-augroup END
 
-" Mark the 81st column magenta
-"highlight OverLength ctermbg=Magenta ctermfg=white guibg=#592929
-hi def link OverLength Error
-match OverLength /\%81v./
+  " Highlight the textwidth column in insert mode
+  if exists('&colorcolumn')
+    au InsertEnter * set colorcolumn+=1
+    au InsertLeave * set colorcolumn=
+  endif
+augroup END
 
 " Colors red both trailing whitespace:
 "  foo   
