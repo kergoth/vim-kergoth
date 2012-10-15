@@ -21,18 +21,14 @@ set softtabstop=4
 " Round indent to a multiple of 'shiftwidth'
 set shiftround
 
+" Copy indent from current line when starting a new line
+set autoindent
+
+" Copy structure of existing line's indent when adding a new line
+set copyindent
+
+" When changing a line's indent, preserve as much of the structure as possible
+set preserveindent
 
 set cinoptions=>s,e0,n0,f0,{0,}0,^0,:s,=s,l0,g0,hs,ps,ts,+s,c3,C0,(0,us,\U0,w0,m0,j0,)20,*30
 set cinkeys=0{,0},0),:,0#,!^F,o,O,e
-
-set autoindent
-set copyindent
-set preserveindent
-set nosmartindent
-
-" If detectindent is available, use it to determine the appropriate
-" indentation settings for the current file
-augroup KergothIndentation
-  au!
-  au BufReadPost * if exists("loaded_detectindent") | exe "DetectIndent" | endif
-augroup END

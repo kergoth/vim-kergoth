@@ -64,18 +64,20 @@ if (&termencoding == 'utf-8') || has('gui_running')
     set listchars+=nbsp:‗
   endif
 
+  " Show trailing whitespace this way if we aren't highlighting it in color
   if (! has('gui_running')) && (&t_Co < 3)
     set listchars+=trail:·
   endif
 else
   let &showbreak = '> '
 
-  set listchars=tab:>-,extends:>
+  set listchars=tab:>-,extends:>,precedes:<
 
   if v:version >= 700
     set listchars+=nbsp:_
   endif
 
+  " Show trailing whitespace this way if we aren't highlighting it in color
   if (! has('gui_running')) && (&t_Co < 3)
     set listchars+=trail:.
   endif
