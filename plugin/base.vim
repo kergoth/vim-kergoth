@@ -1,12 +1,6 @@
 " Don't allow insecure operations when loading a .vimrc in cwd
 set secure
 
-" Don't try to be backwards compatible
-set nocompatible
-
-" Load file-type specific plugins and indent definitions
-filetype plugin indent on
-
 " Don't manually sync the swap to disk on unix, since that's periodically done
 " for us, so the risk of losing data is relatively small, and this should
 " improve performance slightly.
