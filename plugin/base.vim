@@ -45,19 +45,3 @@ else
   let $TEMP = '/tmp'
 endif
 behave xterm
-
-" Special less.sh and man behavior
-fun! <SID>check_pager_mode()
-  if exists('g:loaded_less') && g:loaded_less
-    " we're in vimpager / less.sh / man mode
-    set laststatus=0
-    set ruler
-    set foldmethod=manual
-    set foldlevel=99
-    set nolist
-    " Make <space> in normal mode go down a page rather than left a
-    " character
-    noremap <space> <C-f>
-  endif
-endfun
-au VimEnter * :call <SID>check_pager_mode()
