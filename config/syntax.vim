@@ -18,7 +18,7 @@ augroup KergothHighlight
 
   " Highlight the textwidth column in insert mode
   if exists('&colorcolumn')
-    au InsertEnter * set colorcolumn+=1
+    au InsertEnter * set colorcolumn=+1
     au InsertLeave * set colorcolumn=
   endif
 augroup END
