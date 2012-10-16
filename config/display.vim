@@ -51,6 +51,9 @@ set display+=lastline
 " Abbreviate some messages, hide others
 set shortmess+=atItToO
 
+" Always show status line
+set laststatus=2
+
 " Simple display, no unnecessary frills
 set fillchars=
 
