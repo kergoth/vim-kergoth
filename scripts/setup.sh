@@ -1,7 +1,5 @@
 #!/bin/sh -ex
 
-scriptsdir=$(cd $(dirname $0) && pwd)
-
 mkdir -p ~/.vim/{bundle,backup,undo,swap}
 
 if ! [ -d ~/.vim/bundle/vundle ]; then
@@ -13,6 +11,6 @@ if ! [ -d ~/.vim/bundle/vim-kergoth ]; then
 fi
 
 test -f ~/.vimrc && mv ~/.vimrc ~/.vimrc.bak
-ln -sf $(dirname $scriptsdir)/vimrc ~/.vimrc
+ln -sf .vim/bundle/vim-kergoth/vimrc ~/.vimrc
 
 vim +BundleInstall +qall </dev/tty
