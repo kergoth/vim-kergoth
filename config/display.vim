@@ -16,6 +16,9 @@ if has('conceal')
   set conceallevel=2
 endif
 
+" Always show statusline
+set laststatus=2
+
 " Allow setting window title for screen
 if &term =~ '^screen'
   set t_ts=k
