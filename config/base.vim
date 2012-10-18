@@ -15,6 +15,10 @@ if has('persistent_undo')
   set undodir=~/.vim/undo
 endif
 
+if !exists('$TEMP') && !has('win32')
+  let $TEMP = '/tmp'
+endif
+
 " Write backup files and do not remove them after exit.
 set backup
 set writebackup
@@ -30,12 +34,4 @@ if has('mouse')
   endif
 endif
 
-" Handle win32 behavior
-if has('win32')
-  " I use this rather than 'behave mswin', as the latter makes GVim act like
-  " other windows applications, rather than like Vim.
-  source $VIMRUNTIME/mswin.vim
-else
-  let $TEMP = '/tmp'
-endif
 behave xterm
