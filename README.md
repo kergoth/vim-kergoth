@@ -6,10 +6,6 @@ NOTE: This will move your existing .vimrc to .vimrc.bak and create a new .vimrc
 
     curl -s https://raw.github.com/kergoth/vim-kergoth/master/scripts/setup.sh | sh
 
-Once in vim run
-
-    :BundleInstall
-
 If you wish to use the command-t plugin, you will then need to:
 
     cd ~/.vim/bundle/command-t/ruby/command-t
