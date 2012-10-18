@@ -1,3 +1,7 @@
+if !has('gui_running')
+  finish
+endif
+
 "set guioptions=egmrt
 set guioptions=Acgae
 
