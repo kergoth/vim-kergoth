@@ -118,7 +118,7 @@ endif
 
 " Reliant upon securemodelines rather than the built in one
 set nomodeline
-set modelines=5
+set modelines=0
 
 " Configure securemodelines the way we like it
 let g:secure_modelines_verbose = 1
