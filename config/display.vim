@@ -92,9 +92,6 @@ endif
 if &term == 'xterm-256color'
   set t_Co=256
 endif
-if &t_Co == 256
-  let g:solarized_termcolors=256
-endif
 
 " Make sure the gui is initialized before setting up colors
 if has('gui_running')

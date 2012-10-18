@@ -14,7 +14,7 @@ set popt+=left:5pc
 set printencoding=latin1
 
 " Color scheme to use for printing
-let g:print_syntax = 'solarized'
+let g:print_syntax = 'github'
 
 fun! Print(...)
   let l:colo = g:colors_name
